@@ -13,6 +13,18 @@ photos themselves. Many other libraries exist but usually provide a cut-off
 photos (sometimes based on `object-fit` property) while others fix the height
 or width of all images and leaving spaces at the end of rows/columns.
 
+## Adding to project
+
+```
+pnpm install sweet-sweet-gallery
+```
+
+## Importing in a project
+
+```js
+import { SweetSweetGallery } from 'sweet-sweet-gallery';
+```
+
 ## Usage 1: Initializing in an empty container with list of images.
 
 ```js
