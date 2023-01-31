@@ -7,6 +7,10 @@
     "dist",
     "src"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkhatib/sweet-sweet-gallery"
+  },
   "engines": {
     "node": ">=10"
   },
