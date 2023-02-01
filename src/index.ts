@@ -85,7 +85,7 @@ export class SweetSweetGallery {
         return;
       }
 
-      const imageElements = this.images.map((image, index) => {
+      this.images.forEach((image, index) => {
         const imageEl = document.createElement('img');
         imageEl.src = image.src;
         if (image.srcset) imageEl.srcset = image.srcset.join(',');
@@ -95,22 +95,18 @@ export class SweetSweetGallery {
         imageEl.style.position = 'absolute';
         imageEl.style.width = '100%';
         imageEl.style.height = '100%';
-        if (this.options.onClick)
+        if (this.options.onClick) {
           imageEl.onclick = () => {
             this.options.onClick && this.options.onClick(image, imageEl, index);
           };
-        return imageEl;
-      });
+        }
 
-      imageElements.forEach((imageEl, index) => {
         const imageParentContainer = document.createElement('div');
         const flexValue =
-          imagesConfig[imageEl.src].width! / imagesConfig[imageEl.src].height!;
+          imagesConfig[image.src].width! / imagesConfig[image.src].height!;
         const paddingValue =
-          (imagesConfig[imageEl.src].height! /
-            imagesConfig[imageEl.src].width!) *
+          (imagesConfig[image.src].height! / imagesConfig[image.src].width!) *
           100;
-        console.log(`${paddingValue}`);
         imageParentContainer.style.flex = `${flexValue} 0%`;
         imageParentContainer.style.width = '30%';
         imageParentContainer.style.alignSelf = 'flex-start';

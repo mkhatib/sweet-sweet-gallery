@@ -25,10 +25,10 @@
 <div id="gallery2"></div>
 
 <script type="module">
-  import Gallery from "../dist/sweet-sweet-gallery.esm.js";
+  import {SweetSweetGallery} from "../dist/sweet-sweet-gallery.esm.js";
 
 
-  const existingGallery = Gallery.initFromContainer(document.getElementById("existing-gallery"), {
+  const existingGallery = SweetSweetGallery.initFromContainer(document.getElementById("existing-gallery"), {
     // options
     perRowCount: 4,
     gap: 8,
@@ -50,7 +50,7 @@
     { src: "https://images.unsplash.com/photo-1675025893356-5853331b0759?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" },
   ];
   
-  const gallery = new Gallery({
+  const gallery = new SweetSweetGallery({
     images,
     container: document.querySelector("#gallery"),
     options: {
@@ -71,7 +71,7 @@
     { src: "https://images.unsplash.com/photo-1674784722614-451bbad3f507?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1318&q=80" },
   ];
   
-  const gallery2 = new Gallery({
+  const gallery2 = new SweetSweetGallery({
     images: images2,
     container: document.querySelector("#gallery2"),
     options: {
